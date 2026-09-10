@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-title-key="meta.title">
-    <header class="site-header">
+    <header class="site-header" data-site-header>
       <div class="container">
         <a class="brand" href="index.html" data-i18n="nav.brand">Aldora Demo</a>
         <nav class="nav-links" aria-label="Primary">
@@ -40,7 +40,7 @@
     <main>
       <section class="hero">
         <div class="container hero-grid">
-          <div>
+          <div class="hero-copy" data-hero-copy>
             <p class="hero-eyebrow" data-i18n="hero.eyebrow">West Village · New York · Demo</p>
             <h1 data-i18n="hero.title">Seasonal plates. Thoughtful wines.</h1>
             <p class="hero-sub" data-i18n="hero.subtitle">
@@ -51,10 +51,11 @@
               <a class="btn btn-secondary" href="#about" data-i18n="hero.secondary">Our story</a>
             </div>
           </div>
-          <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual" data-hero-visual aria-hidden="true">
             <img
               src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=1000&fit=crop&q=80"
               alt=""
+              data-hero-img
               onerror="this.style.display='none'"
             />
             <div class="hero-badge">
@@ -65,7 +66,7 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="about">
+      <section class="section section-alt reveal" id="about" data-reveal>
         <div class="container">
           <h2 class="section-title" data-i18n="about.title">About</h2>
           <p class="lead" data-i18n="about.p1">
@@ -77,7 +78,7 @@
         </div>
       </section>
 
-      <section class="section" id="hours">
+      <section class="section reveal" id="hours" data-reveal>
         <div class="container cards-2">
           <div class="info-card">
             <h3 data-i18n="hours.title">Hours</h3>
@@ -108,7 +109,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="container reveal" data-reveal>
         <div class="cta-band">
           <h2 data-i18n="orderPage.title">Demo Menu</h2>
           <p data-i18n="orderPage.subtitle">Browse the demo menu, add items, and place a demo order. Not a real restaurant.</p>
