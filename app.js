@@ -199,10 +199,12 @@
               <img src="${item.img}" alt="" loading="lazy" onerror="this.style.display='none'" />
             </div>
             <div class="menu-card-body">
-              <h3>${escapeHtml(name)}</h3>
+              <div class="menu-card-title">
+                <h3>${escapeHtml(name)}</h3>
+                <span class="price">${money(item.price)}</span>
+              </div>
               <p class="menu-card-desc">${escapeHtml(desc)}</p>
               <div class="menu-card-row">
-                <span class="price">${money(item.price)}</span>
                 <button type="button" class="btn btn-primary btn-sm" data-add="${item.id}">
                   ${escapeHtml(t("orderPage.add"))}
                 </button>
@@ -310,6 +312,7 @@
         <div class="cart-empty">
           <p><strong data-i18n="orderPage.empty">${escapeHtml(t("orderPage.empty"))}</strong></p>
           <p data-i18n="orderPage.emptyHint">${escapeHtml(t("orderPage.emptyHint"))}</p>
+          <button type="button" class="btn btn-secondary btn-sm" data-close-cart data-i18n="orderPage.browseMenu">${escapeHtml(t("orderPage.browseMenu"))}</button>
         </div>`;
       if (footerEl) footerEl.hidden = true;
       return;
@@ -403,8 +406,9 @@
       el.addEventListener("click", openCart);
     });
     document.getElementById("cart-overlay")?.addEventListener("click", closeCart);
-    document.querySelectorAll("[data-close-cart]").forEach((el) => {
-      el.addEventListener("click", closeCart);
+    document.addEventListener("click", (e) => {
+      const closeBtn = e.target.closest("[data-close-cart]");
+      if (closeBtn) closeCart();
     });
     document.getElementById("place-order-btn")?.addEventListener("click", placeOrderDemo);
     document.getElementById("clear-cart-btn")?.addEventListener("click", clearCart);
