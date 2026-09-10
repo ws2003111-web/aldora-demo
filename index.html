@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Aldora Demo — fictional Manhattan bistro demo. Seasonal American-European plates, wine-forward. Multilingual QR ordering demo. Not a real restaurant." />
+    <title>Aldora Demo — Manhattan Bistro Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-title-key="meta.title">
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" data-i18n="nav.brand">Aldora Demo</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#hours" data-i18n="nav.hours">Hours</a>
+          <a href="order.html" data-i18n="nav.order">Order</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switcher">
+            <button type="button" class="lang-toggle" data-lang-toggle aria-haspopup="listbox">
+              <span aria-hidden="true">🌐</span>
+              <span data-lang-current>English</span>
+            </button>
+            <div class="lang-menu" role="listbox">
+              <button type="button" data-lang="en" role="option">English</button>
+              <button type="button" data-lang="zh" role="option">中文</button>
+              <button type="button" data-lang="ko" role="option">한국어</button>
+              <button type="button" data-lang="fr" role="option">Français</button>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm" href="order.html" data-i18n="nav.order">Order</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="hero-eyebrow" data-i18n="hero.eyebrow">West Village · New York · Demo</p>
+            <h1 data-i18n="hero.title">Seasonal plates. Thoughtful wines.</h1>
+            <p class="hero-sub" data-i18n="hero.subtitle">
+              A fictional contemporary Manhattan bistro demo where wood, soft light, and European-American cooking meet the evening.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="order.html" data-i18n="hero.cta">Order for pickup</a>
+              <a class="btn btn-secondary" href="#about" data-i18n="hero.secondary">Our story</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=1000&fit=crop&q=80"
+              alt=""
+              onerror="this.style.display='none'"
+            />
+            <div class="hero-badge">
+              <strong data-i18n="nav.brand">Aldora Demo</strong>
+              <span>48 Grove Street</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about">
+        <div class="container">
+          <h2 class="section-title" data-i18n="about.title">About</h2>
+          <p class="lead" data-i18n="about.p1">
+            Aldora Demo is a fictional West Village bistro created for a multilingual QR ordering demo. We serve seasonal American-European plates in a warm, wood-lined room with a wine-forward list. Not a real restaurant.
+          </p>
+          <p class="lead" data-i18n="about.p2">
+            This site is static and offline-capable — perfect for cold outreach demos. No kitchen receives your order. Demo use only.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="hours">
+        <div class="container cards-2">
+          <div class="info-card">
+            <h3 data-i18n="hours.title">Hours</h3>
+            <ul class="hours-list">
+              <li>
+                <span class="day" data-i18n="hours.monThu">Monday – Thursday</span>
+                <span class="time" data-i18n="hours.monThuTime">5:00 PM – 10:00 PM</span>
+              </li>
+              <li>
+                <span class="day" data-i18n="hours.friSat">Friday – Saturday</span>
+                <span class="time" data-i18n="hours.friSatTime">5:00 PM – 11:00 PM</span>
+              </li>
+              <li>
+                <span class="day" data-i18n="hours.sun">Sunday</span>
+                <span class="time" data-i18n="hours.sunTime">4:00 PM – 9:00 PM</span>
+              </li>
+            </ul>
+            <p class="note" data-i18n="hours.note">Kitchen closes 30 minutes before closing. (Demo hours only.)</p>
+          </div>
+          <div class="info-card address-block" id="visit">
+            <h3 data-i18n="location.title">Visit us</h3>
+            <p class="street" data-i18n="location.address">48 Grove Street</p>
+            <p data-i18n="location.city">New York, NY 10014</p>
+            <p data-i18n="location.neighborhood">West Village</p>
+            <p data-i18n="location.phone">(212) 555-0148</p>
+            <p class="note" data-i18n="location.disclaimer">Fake address — demo only. Not a real restaurant.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="cta-band">
+          <h2 data-i18n="orderPage.title">Demo Menu</h2>
+          <p data-i18n="orderPage.subtitle">Browse the demo menu, add items, and place a demo order. Not a real restaurant.</p>
+          <a class="btn btn-primary" href="order.html" data-i18n="nav.order">Order</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="brand" data-i18n="nav.brand">Aldora Demo</span>
+        <p data-i18n="footer.tagline">Fictional Manhattan bistro · Demo only · Not a real restaurant</p>
+        <p data-i18n="footer.rights">© 2026 Aldora Demo. Not a real restaurant. Demo use only.</p>
+      </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
